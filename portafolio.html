@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio — NOVA Soluciones Digitales</title>
+<meta name="description" content="Conoce los proyectos reales desarrollados por NOVA Soluciones Digitales: páginas web, aplicaciones y soluciones digitales para negocios en México.">
+<link rel="icon" href="imagenes/isotipo.png" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<!-- ===================== HEADER ===================== -->
+<header class="navbar scrolled" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><img src="imagenes/isotipo.png" alt="Isotipo NOVA"></span>
+      <span>NOVA</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="portafolio.html">Portafolio</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="https://wa.me/529931796933?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20mi%20proyecto" target="_blank" rel="noopener" class="btn btn-gold btn-sm">Hablemos de tu proyecto</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html#nosotros">Nosotros</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="portafolio.html">Portafolio</a></li>
+      <li><a href="https://wa.me/529931796933?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20mi%20proyecto" target="_blank" rel="noopener" class="btn btn-gold">Hablemos de tu proyecto</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO PORTAFOLIO ===================== -->
+<section class="pf-hero">
+  <div class="container">
+    <span class="eyebrow" style="justify-content:center">Portafolio</span>
+    <h1 style="margin-top:20px;">Nuestro Portafolio</h1>
+    <p>Cada proyecto representa una solución creada para ayudar a nuestros clientes a crecer.</p>
+  </div>
+</section>
+
+<!-- ===================== FILTROS ===================== -->
+<div class="container pf-filters">
+  <div class="filter-row" id="mainFilters">
+    <button class="filter-pill active" data-filter="todos">Todos</button>
+    <button class="filter-pill" data-filter="paginas-web">Páginas Web</button>
+    <button class="filter-pill" data-filter="material-digital">Material Digital</button>
+  </div>
+  <div class="sub-filter-row" id="subFilterRow">
+    <div class="filter-row">
+      <button class="filter-pill" data-subfilter="menus">Menús</button>
+      <button class="filter-pill" data-subfilter="catalogos">Catálogos</button>
+      <button class="filter-pill" data-subfilter="tarjetas">Tarjetas de Presentación</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== GRID ===================== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="pf-grid" id="pfGrid"></div>
+    <div class="pf-empty" id="pfEmpty">
+      <p>Aún no tenemos proyectos publicados en esta categoría. Muy pronto habrá novedades ✨</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><span class="logo-mark"><img src="imagenes/isotipo.png" alt="Isotipo NOVA"></span><span>NOVA</span></div>
+        <p>Agencia digital especializada en diseño web y soluciones digitales para emprendedores, profesionistas y pequeñas empresas en México.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="index.html#servicios">Páginas Web</a></li>
+          <li><a href="index.html#servicios">Material Digital</a></li>
+          <li><a href="index.html#servicios">Configuraciones</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-grid" style="grid-template-columns:1fr; padding-top:0; border-top:none; margin-top:-20px;">
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul style="display:flex; gap:28px; flex-wrap:wrap;">
+          <li><a href="https://wa.me/529931796933" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="#" onclick="return false;" style="opacity:.45;">Instagram</a></li>
+          <li><a href="#" onclick="return false;" style="opacity:.45;">LinkedIn</a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pcancino0705@gmail.com&su=Quiero%20iniciar%20un%20proyecto%20con%20NOVA" target="_blank" rel="noopener">hola@novadigital.mx</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 NOVA Soluciones Digitales. Todos los derechos reservados.</span>
+      <span>Diseñado y desarrollado por NOVA</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== MODAL DE PROYECTO ===================== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="project-modal">
+    <div class="modal-media">
+      <span class="modal-tag" id="modalTag"></span>
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <img id="modalImg" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <h2 id="modalTitle"></h2>
+      <div class="modal-client" id="modalClient"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-meta-grid">
+        <div class="modal-meta-box">
+          <div class="label">Tecnologías</div>
+          <div class="value gold" id="modalTech"></div>
+        </div>
+        <div class="modal-meta-box">
+          <div class="label">Tiempo de desarrollo</div>
+          <div class="value" id="modalTime"></div>
+        </div>
+      </div>
+      <a href="#" id="modalVisit" target="_blank" rel="noopener" class="btn btn-gold">Visitar sitio web →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DOCK FLOTANTE ===================== -->
+<div class="dock" id="dock">
+  <a class="dock-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=pcancino0705@gmail.com&su=Quiero%20iniciar%20un%20proyecto%20con%20NOVA" target="_blank" rel="noopener" aria-label="Correo" title="Correo">✉️</a>
+  <a class="dock-item disabled" href="#" onclick="return false;" aria-label="LinkedIn" title="Próximamente">💼</a>
+  <a class="dock-item disabled" href="#" onclick="return false;" aria-label="Instagram" title="Próximamente">📷</a>
+  <a class="dock-item" href="https://wa.me/529931796933" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">📱</a>
+  <button class="dock-main" id="dockToggle" aria-label="Abrir redes sociales" aria-expanded="false">
+    <img src="imagenes/isotipo.png" alt="NOVA">
+  </button>
+</div>
+
+<script src="projects.js"></script>
+<script src="script.js"></script>
+<script src="portafolio.js"></script>
+</body>
+</html>
