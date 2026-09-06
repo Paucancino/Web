@@ -1,0 +1,370 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* CONTACTO (WHATSAPP E E-MAIL) */
+.top-bar {
+  background: #2f3d5e;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+}
+
+.top-bar i {
+  margin-right: 6px;
+}
+
+/* WhatsApp color */
+.whatsapp i {
+  color: #25D366;
+}
+
+/* Email color */
+.email i {
+  color: #EA4335;
+}
+
+/* Línea divisoria */
+.divider {
+  margin: 0 20px;
+  color: #999;
+}
+
+/* INDICE */ 
+
+/* HEADER PRINCIPAL */
+/* ===== HEADER PREMIUM ===== */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo img {
+  height: 70px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1f2b3d;
+  margin-left: 28px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* LINEA ANIMADA */
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #0d5c91;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #0d5c91;
+}
+
+/* BOTÓN CONTACTO */
+.btn-contacto {
+  background: linear-gradient(135deg, #1f3f70, #0d5c91);
+  color: white !important;
+  padding: 11px 20px;
+  border-radius: 30px;
+  margin-left: 25px;
+  box-shadow: 0 8px 20px rgba(13,92,145,0.25);
+  transition: 0.3s;
+}
+
+.btn-contacto:hover {
+  transform: translateY(-2px);
+}
+
+/* HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background: white;
+    width: 220px;
+    border-radius: 12px;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .menu a {
+    display: block;
+    margin: 12px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .btn-contacto {
+    background: none;
+    color: #1f2b3d !important;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+/* FONDO */
+/* HERO CON IMAGEN */
+/* SECCIÓN HERO ESTILO TARJETA */
+.hero {
+  height: 75vh;
+  margin: 30px 20px; /* 👈 separación de arriba y lados */
+  border-radius: 20px; /* 👈 esquinas redondeadas */
+  overflow: hidden; /* 👈 para que la imagen respete bordes */
+
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* OVERLAY OSCURO */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(20, 40, 80, 0.6),
+    rgba(20, 40, 80, 0.4)
+  );
+  z-index: 1;
+}
+
+/* ANIMACIÓN DE ZOOM */
+.hero {
+  animation: zoomFondo 20s infinite alternate;
+}
+
+@keyframes zoomFondo {
+  0% { background-size: 100%; }
+  100% { background-size: 110%; }
+}
+
+/* CONTENIDO */
+.overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+
+  background: rgba(255, 255, 255, 0.1); /* transparente */
+
+  padding: 40px;
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2); /* borde sutil */
+}
+
+.overlay h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BOTONES */
+.buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary {
+  background: #2f3d5e;
+  color: white;
+}
+
+/* BOTÓN SECUNDARIO */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* SLIDES */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeSlider 20s infinite;
+}
+
+/* TIEMPOS */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+
+/* ANIMACIÓN */
+@keyframes fadeSlider {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  25%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 20px 10px;
+    border-radius: 15px;
+  }
+}
+
+.productos {
+  padding: 80px 20px;
+  background: #f4f6fa;
+}
+
+.productos h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* HOVER PRO */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* IMAGEN */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CONTENIDO */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  color: #1f2b3d;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* LISTA */
+.card-content ul {
+  padding-left: 18px;
+}
+
+.card-content li {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.footer {
+  background: #0d1b3d; /* azul oscuro elegante */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* línea sutil arriba */
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer p {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.footer p:hover {
+  opacity: 1;
+}

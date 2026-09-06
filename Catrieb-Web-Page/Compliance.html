@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <link rel="icon" href="imagenes/logo.png" type="image/png">
+  <title>CATRIEB</title>
+
+  <link rel="stylesheet" href="Compliance.css">
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+     <!-- HEADER -->
+  <header class="main-header reveal">
+    <div class="logo">
+      <a href="index.html"> <img src="imagenes/logo.png" alt="Logo"> </a>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav class="menu" id="menu">
+      <a href="index.html #somos">Quiénes somos</a>
+      <a href="index.html #servicio">Servicios</a>
+      <a href="productos.html">Productos</a>
+      <a href="Compliance.html">Compliance</a>
+      <a href="https://wa.me/8333076378" class="btn-contacto">Contacto</a>
+    </nav>
+  </header>
+
+<section class="denuncias">
+    <div class="container">
+
+        <h1>TRANSPARENCIA</h1>
+        <h2>BUZÓN DE DENUNCIAS</h2>
+
+        <div class="contenido">
+
+            <!-- FORMULARIO -->
+          <form class="formulario">
+
+  <input type="text" id="nombre" placeholder="Nombre" required>
+  <input type="text" id="empresa" placeholder="Empresa">
+  <input type="email" id="correo" placeholder="Correo" required>
+  <input type="text" id="telefono" placeholder="Teléfono">
+
+  <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+
+  <button type="button" onclick="enviarWhatsApp()">
+    ENVIAR MENSAJE POR WHATSAPP
+  </button>
+
+</form>
+
+            <!-- INFO DERECHA -->
+            <div class="info">
+                <p>
+                    En <strong>Castrieb</strong> estamos comprometidos con la honestidad, la transparencia y el cumplimiento normativo. 
+                    Este canal se encuentra disponible para que colaboradores, proveedores o cualquier persona relacionada con nuestras 
+                    operaciones pueda reportar conductas indebidas, de manera confidencial y segura.
+                </p>
+
+                <h4>Puedes denunciar:</h4>
+                <ul>
+                    <li>Actos de corrupción.</li>
+                    <li>Prácticas inseguras.</li>
+                    <li>Incumplimientos normativos.</li>
+                    <li>Abuso de autoridad.</li>
+                    <li>Manipulación de información.</li>
+                    <li>Conductas contrarias a nuestros valores.</li>
+                </ul>
+
+                <h4>Medios de denuncia:</h4>
+                <p><strong>Correo directo:</strong><br> Castrieb.sadcv@gmail.com</p>
+               <p><strong>Teléfono:</strong><br> +52 833 307 6378</p>
+            </div>
+
+        </div>
+
+        <p class="aviso">
+            Tus datos estarán protegidos. La información recibida se maneja bajo estricta confidencialidad y sin represalias.
+        </p>
+
+    </div>
+</section>
+
+ <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function mostrar() {
+      const trigger = window.innerHeight * 0.85;
+
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < trigger) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", mostrar);
+    window.addEventListener("load", mostrar);
+  </script>
+
+
+<footer class="footer">
+  <p>© 2026 CASTRIEB. Todos los derechos reservados.</p>
+</footer> 
+
+</body>
+
+
+</html>
